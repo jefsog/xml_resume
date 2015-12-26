@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="en-gb" lang="en-gb"><head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-language" content="en-gb">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<title>Apache Friends Support Forum • View topic - help with openssl and how to test</title>
+
+<script src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+      //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-76894-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+      //]]>
+    </script>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - Apache Friends Support Forum" href="https://community.apachefriends.org/f/feed.php"><link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="https://community.apachefriends.org/f/feed.php?mode=forums"><link rel="alternate" type="application/atom+xml" title="Feed - Forum - XAMPP for Windows" href="https://community.apachefriends.org/f/feed.php?f=16">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Enter the page number you wish to go to:';
+	var on_page = '1';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/; domain=.apachefriends.org; secure';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/styleswitcher.js"></script>
+<script type="text/javascript" src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/forum_fn.js"></script>
+
+<link href="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/print.css" rel="stylesheet" type="text/css" media="print" title="printonly">
+<link href="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/style.css" rel="stylesheet" type="text/css" media="screen, projection">
+
+<link href="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/normal.css" rel="stylesheet" type="text/css" title="A">
+<link href="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/medium.css" rel="alternate stylesheet" type="text/css" title="A+">
+<link href="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/large.css" rel="alternate stylesheet" type="text/css" title="A++">
+
+
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="https://community.apachefriends.org/f/index.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" title="Board index" id="logo"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/site_logo.gif" alt="" title="" height="52" width="139"></a>
+				<h1>Apache Friends Support Forum</h1>
+				<p></p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+		
+			<div id="search-box">
+				<form action="./search.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" maxlength="128" title="Search for keywords" class="inputbox search" value="Search…" onclick="if(this.value=='Search…')this.value='';" onblur="if(this.value=='')this.value='Search…';" type="text">
+					<input class="button2" value="Search" type="submit"><br>
+					<a href="https://community.apachefriends.org/f/search.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" title="View the advanced search options">Advanced search</a> <input name="sid" value="8f895d1cc27aed9d0c7e37cf844d12a3" type="hidden">
+
+				</fieldset>
+				</form>
+			</div>
+		
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="https://community.apachefriends.org/f/index.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" accesskey="h">Board index</a>  <strong>‹</strong> <a href="https://community.apachefriends.org/f/viewforum.php?f=34&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">XAMPP in English</a> <strong>‹</strong> <a href="https://community.apachefriends.org/f/viewforum.php?f=16&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">XAMPP for Windows</a></li>
+
+				<li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Change font size">Change font size</a></li>
+
+				<li class="rightside"><a href="https://community.apachefriends.org/f/viewtopic.php?f=16&amp;t=42263&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3&amp;view=print" title="Print view" accesskey="p" class="print">Print view</a></li>
+			</ul>
+
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="https://community.apachefriends.org/f/faq.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" title="Frequently Asked Questions">FAQ</a></li>
+				<li class="icon-register"><a href="https://community.apachefriends.org/f/ucp.php?mode=register&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Register</a></li>
+					<li class="icon-logout"><a href="https://community.apachefriends.org/f/ucp.php?mode=login&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3" title="Login" accesskey="x">Login</a></li>
+				
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="https://community.apachefriends.org/f/viewtopic.php?f=16&amp;t=42263&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">help with openssl and how to test</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body --><div style="display: none !important;">Problems with the Windows version of XAMPP, questions, comments, and anything  related. <br></div>
+
+<div class="topic-actions">
+
+	<div class="buttons">
+	
+		<div class="reply-icon"><a href="https://community.apachefriends.org/f/posting.php?mode=reply&amp;f=16&amp;t=42263&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3" title="Post a reply"><span></span>Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="search-box">
+			<form method="get" id="topic-search" action="./search.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3">
+			<fieldset>
+				<input class="inputbox search tiny" name="keywords" id="search_keywords" size="20" value="Search this topic…" onclick="if(this.value=='Search this topic…')this.value='';" onblur="if(this.value=='')this.value='Search this topic…';" type="text">
+				<input class="button2" value="Search" type="submit">
+				<input name="t" value="42263" type="hidden">
+<input name="sf" value="msgonly" type="hidden">
+<input name="sid" value="8f895d1cc27aed9d0c7e37cf844d12a3" type="hidden">
+
+			</fieldset>
+			</form>
+		</div>
+	
+		<div class="pagination">
+			9 posts
+			 • Page <strong>1</strong> of <strong>1</strong>
+		</div>
+	
+
+</div>
+<div class="clear"></div>
+
+
+	<div id="p166644" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3 class="first"><a href="#p166644">help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=166644&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p166644"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a></strong> » 14. October 2010 12:07 </p>
+
+			
+
+			<div class="content">Hi all,<br><br>I downloaded XAMPP the other day 
+for my Windows 7 (XAMPP 1.7.3). I want to enable OpenSSL and test it but
+ I can't seem to find it anywhere? There are no dll's related to it and 
+my php.ini does not contain <span style="font-weight: bold">;extension=php_openssl.dll</span><br><br>Confused <img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_sad.gif" alt=":(" title="Sad"><br><br>According to phpinfo() its already enabled.. so how do i test it?</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile166644">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 10</dd><dd><strong>Joined:</strong> 11. February 2010 23:21</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p166650" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p166650">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=166650&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p166650"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=28892&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Nobbie</a></strong> » 14. October 2010 13:51 </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>megos wrote:</cite>There are no dll's related to it and my php.ini does not contain <span style="font-weight: bold">;extension=php_openssl.dll</span></div></blockquote><br><br>It is statically linked into the core module, you need not to specify any extension for PHP.<br><br><blockquote><div><cite>megos wrote:</cite>so how do i test it?</div></blockquote><br><br>Simply run your tests (as if you had enabled php_openssl.dll).</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile166650">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=28892&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Nobbie</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 7504</dd><dd><strong>Joined:</strong> 09. March 2008 13:04</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p166651" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p166651">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=166651&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p166651"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a></strong> » 14. October 2010 14:07 </p>
+
+			
+
+			<div class="content">I run them but i get errors like <br><br><dl class="codebox"><dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>Warning:
+ openssl_pkey_export() [function.openssl-pkey-export]: cannot get key 
+from parameter 1 in C:\xampp\htdocs\test.php on line 16<br><br>Warning: openssl_pkey_get_details() expects parameter 1 to be resource, boolean given in C:\xampp\htdocs\test.php on line 19<br><br><br>Warning:
+ openssl_public_encrypt() [function.openssl-public-encrypt]: key 
+parameter is not a valid public key in C:\xampp\htdocs\test.php on line 
+28<br><br>Warning: openssl_private_decrypt() 
+[function.openssl-private-decrypt]: key parameter is not a valid private
+ key in C:\xampp\htdocs\test.php on line 32<br></code></dd></dl><br><br>I suspect it can't find the conf file? Help  <img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_biggrin.gif" alt=":D" title="Very Happy"><br><br>Edit.. it is pointing to the correct file..<br><br>OPENSSL_CONF 	C:/xampp/apache/bin/openssl.cnf</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile166651">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 10</dd><dd><strong>Joined:</strong> 11. February 2010 23:21</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p166777" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p166777">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=166777&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p166777"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a></strong> » 17. October 2010 00:06 </p>
+
+			
+
+			<div class="content">can anyone help me? i cant seem to get help.<br><br>php.ini does not have any ;extension=php_openssl.dll (there is also no php_openssl.dll anywhere)<br><br>openssl found in apache/bin<br><br>phpinfo() tells me it's enabled and is pointing to the conf correctly.<br><br>libeay32.dll also in apache/bin.<br><br>I've added the dll to my PATH and restarted my system, and XAMPP.<br><br>I've googled everywhere for help but old tutorials only seem to mention uncommenting the extension=php_openssl.dll bit.</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile166777">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 10</dd><dd><strong>Joined:</strong> 11. February 2010 23:21</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p166790" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p166790">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=166790&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p166790"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a></strong> » 17. October 2010 18:35 </p>
+
+			
+
+			<div class="content">Error log<br><br><blockquote class="uncited"><div>OpenSSL Error: error:02001003:system library:fopen:No such process<br>OpenSSL Error: error:2006D080:BIO routines:BIO_new_file:no such file<br>OpenSSL Error: error:0E064002:configuration file routines:CONF_load:system lib<br>OpenSSL Error: error:02001003:system library:fopen:No such process<br>OpenSSL Error: error:2006D080:BIO routines:BIO_new_file:no such file<br>OpenSSL Error: error:0E064002:configuration file routines:CONF_load:system lib<br></div></blockquote></div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile166790">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=44759&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">megos</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 10</dd><dd><strong>Joined:</strong> 11. February 2010 23:21</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p166796" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p166796">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=166796&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p166796"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=48168&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Dariusc123456</a></strong> » 18. October 2010 00:10 </p>
+
+			
+
+			<div class="content">Openssl have been a problem on window servers. I
+ dont know how but one day, it started working for me but it rarely 
+works now but I have no use for it at the moment other than making 
+self-signed certificates.</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile166796">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=48168&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Dariusc123456</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 22</dd><dd><strong>Joined:</strong> 15. October 2010 15:18</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p168809" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p168809">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=168809&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p168809"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=48744&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">mawg</a></strong> » 27. November 2010 05:04 </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>megos wrote:</cite>can anyone help me? i cant seem to get help.<br><br>php.ini does not have any ;extension=php_openssl.dll (there is also no php_openssl.dll anywhere)<br><br>openssl found in apache/bin<br><br>phpinfo() tells me it's enabled and is pointing to the conf correctly.<br><br>libeay32.dll also in apache/bin.<br><br>I've added the dll to my PATH and restarted my system, and XAMPP.<br><br>I've googled everywhere for help but old tutorials only seem to mention uncommenting the extension=php_openssl.dll bit.</div></blockquote><br><br><br>Just
+ to say that I also have this problem, several years after the original 
+poster. I can't find help anywhere &amp; will soon have to look for 
+alternatives (urk! Microsoft)</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile168809">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=48744&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">mawg</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 7</dd><dd><strong>Joined:</strong> 27. November 2010 05:01</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p168810" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p168810">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=168810&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p168810"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=48744&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">mawg</a></strong> » 27. November 2010 05:10 </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>megos wrote:</cite>Hi all,<br><br>I
+ downloaded XAMPP the other day for my Windows 7 (XAMPP 1.7.3). I want 
+to enable OpenSSL and test it but I can't seem to find it anywhere? 
+There are no dll's related to it and my php.ini does not contain <span style="font-weight: bold">;extension=php_openssl.dll</span><br><br>Confused <img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_sad.gif" alt=":(" title="Sad"><br><br>According to phpinfo() its already enabled.. so how do i test it?</div></blockquote><br><br><br>Me too!   Any answers?</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile168810">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=48744&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">mawg</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 7</dd><dd><strong>Joined:</strong> 27. November 2010 05:01</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<div id="p180976" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+
+			<h3><a href="#p180976">Re: help with openssl and how to test</a></h3>
+			<p class="author"><a href="https://community.apachefriends.org/f/viewtopic.php?p=180976&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3#p180976"><img src="Apache%20Friends%20Support%20Forum%20%E2%80%A2%20View%20topic%20-%20help%20with%20openssl%20and%20how%20to%20test_files/icon_post_target.gif" alt="Post" title="Post" height="9" width="11"></a>by <strong><a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=57605&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Neil_Smith</a></strong> » 07. June 2011 14:38 </p>
+
+			
+
+			<div class="content">I'm using Windows 7 64bit and I've been having a right headache with this issue.<br><br>After testing various methods I've found the best solution.<br><br>1. Click on the  START button<br>2. Click on CONTROL PANEL<br>3. Click on SYSTEM AND SECURITY<br>4. Click on SYSTEM<br>5. Click on ADVANCED SYSTEM SETTINGS<br>6. Click on ENVIRONMENT VARIABLES<br>7. Under "System Variables" click on "NEW"<br>8. Enter the "Variable name" OPENSSL_CONF<br>9. Enter the "Variable value". My is - C:\XAMPP\php\extras\openssl\openssl.cnf<br>10. Click "OK" and close all the windows and RESTART your computer.<br><br>The OPENSSL should be correctly working.<br><br>Hopefully XAMPP will make the installation script add this as a default!<br><br>EDIT:
+ Now getting the error "string(31) "C:/xampp/apache/bin/openssl.cnf" 
+error:0E06D06C:configuration file routines:NCONF_get_string:no value"<br><br>ARRRGGGHH!!!!</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile180976">
+			<dt>
+				<a href="https://community.apachefriends.org/f/memberlist.php?mode=viewprofile&amp;u=57605&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Neil_Smith</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> 07. June 2011 14:29</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider">
+
+	<form id="viewtopic" method="post" action="./viewtopic.php?f=16&amp;t=42263&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">
+
+	<fieldset class="display-options" style="margin-top: 0; ">
+		
+		<label>Display posts from previous: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+		<label>Sort by <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label> <label><select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select> <input name="sort" value="Go" class="button2" type="submit"></label>
+		
+	</fieldset>
+
+	</form>
+	<hr>
+
+
+<div class="topic-actions">
+	<div class="buttons">
+	
+		<div class="reply-icon"><a href="https://community.apachefriends.org/f/posting.php?mode=reply&amp;f=16&amp;t=42263&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3" title="Post a reply"><span></span>Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="pagination">
+			9 posts
+			 • Page <strong>1</strong> of <strong>1</strong>
+		</div>
+	
+</div>
+
+
+	<p></p><p><a href="https://community.apachefriends.org/f/viewforum.php?f=16&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3" class="left-box left" accesskey="r">Return to XAMPP for Windows</a></p>
+
+	<form method="post" id="jumpbox" action="./viewforum.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" onsubmit="if(this.f.value == -1){return false;}">
+
+	
+		<fieldset class="jumpbox">
+	
+			<label for="f" accesskey="j">Jump to:</label>
+			<select name="f" id="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+			
+				<option value="-1">Select a forum</option>
+			<option value="-1">------------------</option>
+				<option value="31">Apache Friends</option>
+			
+				<option value="1">&nbsp; &nbsp;Apache Friends</option>
+			
+				<option value="12">&nbsp; &nbsp;Ankündigungen und Neuigkeiten</option>
+			
+				<option value="2">&nbsp; &nbsp;Allerlei</option>
+			
+				<option value="32">XAMPP auf Deutsch</option>
+			
+				<option value="4">&nbsp; &nbsp;XAMPP für Windows</option>
+			
+				<option value="3">&nbsp; &nbsp;XAMPP für Linux</option>
+			
+				<option value="28">&nbsp; &nbsp;XAMPP für Mac OS X</option>
+			
+				<option value="24">&nbsp; &nbsp;XAMPP für Solaris</option>
+			
+				<option value="9">&nbsp; &nbsp;XAMPP-Wunschzettel</option>
+			
+				<option value="26">&nbsp; &nbsp;XAMPP AddOns</option>
+			
+				<option value="33">Grundlagen und Wissenswertes</option>
+			
+				<option value="5">&nbsp; &nbsp;Apache</option>
+			
+				<option value="7">&nbsp; &nbsp;MySQL</option>
+			
+				<option value="6">&nbsp; &nbsp;PHP</option>
+			
+				<option value="8">&nbsp; &nbsp;Perl</option>
+			
+				<option value="11">&nbsp; &nbsp;ProFTPD</option>
+			
+				<option value="14">&nbsp; &nbsp;phpMyAdmin</option>
+			
+				<option value="15">&nbsp; &nbsp;Webmin</option>
+			
+				<option value="27">&nbsp; &nbsp;FileZilla</option>
+			
+				<option value="34">XAMPP in English</option>
+			
+				<option value="13">&nbsp; &nbsp;Announcements and news</option>
+			
+				<option value="16" selected="selected">&nbsp; &nbsp;XAMPP for Windows</option>
+			
+				<option value="17">&nbsp; &nbsp;XAMPP for Linux</option>
+			
+				<option value="29">&nbsp; &nbsp;XAMPP for Mac OS X</option>
+			
+				<option value="25">&nbsp; &nbsp;XAMPP for Solaris</option>
+			
+			</select>
+			<input value="Go" class="button2" type="submit">
+		</fieldset>
+	</form>
+
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: No registered users and 76 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="https://community.apachefriends.org/f/index.php?sid=8f895d1cc27aed9d0c7e37cf844d12a3" accesskey="h">Board index</a></li>
+				
+			<li class="rightside"><a href="https://community.apachefriends.org/f/memberlist.php?mode=leaders&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">The team</a> • <a href="https://community.apachefriends.org/f/ucp.php?mode=delete_cookies&amp;sid=8f895d1cc27aed9d0c7e37cf844d12a3">Delete all board cookies</a> • All times are UTC + 1 hour </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://bitnami.com/stack/phpbb/">Bitnami phpBB</a>
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+
+</body></html>

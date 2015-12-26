@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy datauri" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <title>PHP: openssl_error_string - Manual </title>
+
+ <link rel="shortcut icon" href="http://php.net/favicon.ico">
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="http://php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="http://php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="http://php.net/manual/en/function.openssl-error-string.php">
+ <link rel="shorturl" href="http://php.net/openssl-error-string">
+ <link rel="alternate" href="http://php.net/openssl-error-string" hreflang="x-default">
+
+ <link rel="contents" href="http://php.net/manual/en/index.php">
+ <link rel="index" href="http://php.net/manual/en/ref.openssl.php">
+ <link rel="prev" href="http://php.net/manual/en/function.openssl-encrypt.php">
+ <link rel="next" href="http://php.net/manual/en/function.openssl-free-key.php">
+
+ <link rel="alternate" href="http://php.net/manual/en/function.openssl-error-string.php" hreflang="en">
+ <link rel="alternate" href="http://php.net/manual/pt_BR/function.openssl-error-string.php" hreflang="pt_BR">
+ <link rel="alternate" href="http://php.net/manual/zh/function.openssl-error-string.php" hreflang="zh">
+ <link rel="alternate" href="http://php.net/manual/fr/function.openssl-error-string.php" hreflang="fr">
+ <link rel="alternate" href="http://php.net/manual/de/function.openssl-error-string.php" hreflang="de">
+ <link rel="alternate" href="http://php.net/manual/ja/function.openssl-error-string.php" hreflang="ja">
+ <link rel="alternate" href="http://php.net/manual/kr/function.openssl-error-string.php" hreflang="kr">
+ <link rel="alternate" href="http://php.net/manual/ro/function.openssl-error-string.php" hreflang="ro">
+ <link rel="alternate" href="http://php.net/manual/ru/function.openssl-error-string.php" hreflang="ru">
+ <link rel="alternate" href="http://php.net/manual/es/function.openssl-error-string.php" hreflang="es">
+ <link rel="alternate" href="http://php.net/manual/tr/function.openssl-error-string.php" hreflang="tr">
+
+<link rel="stylesheet" type="text/css" href="PHP%20%20openssl_error_string%20-%20Manual_files/cached.css" media="screen">
+<link rel="stylesheet" type="text/css" href="PHP%20%20openssl_error_string%20-%20Manual_files/cached_004.css" media="screen">
+<link rel="stylesheet" type="text/css" href="PHP%20%20openssl_error_string%20-%20Manual_files/cached_003.css" media="screen">
+<link rel="stylesheet" type="text/css" href="PHP%20%20openssl_error_string%20-%20Manual_files/cached_002.css" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="http://php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script type="text/javascript">
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="http://php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script type="text/javascript" src="http://php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <!-- base href="http://php.net/manual/en/function.openssl-error-string.php" -->
+
+</head>
+<body class="docs ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="http://php.net/" class="brand"><img src="PHP%20%20openssl_error_string%20-%20Manual_files/logo.png" alt="php" height="24" width="48"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input id="mainmenu-toggle" type="checkbox">
+    <ul class="nav">
+      <li class=""><a href="http://php.net/downloads">Downloads</a></li>
+      <li class="active"><a href="http://php.net/docs.php">Documentation</a></li>
+      <li class=""><a href="http://php.net/get-involved">Get Involved</a></li>
+      <li class=""><a href="http://php.net/support">Help</a></li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input name="show" value="quickref" type="hidden">
+      <span style="position: relative; display: inline-block;" class="twitter-typeahead"><input style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;" class="tt-hint search-query" autocomplete="off" spellcheck="off" disabled="disabled" type="text"><input dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" spellcheck="false" autocomplete="off" name="pattern" class="search-query tt-query" placeholder="Search" accesskey="s" type="search"><input style="visibility: hidden; position: fixed" type="submit"><span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: &quot;Fira Sans&quot;,&quot;Source Sans Pro&quot;,Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></span><span style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;" class="tt-dropdown-menu"></span></span>
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href="http://php.net/index.php#id2015-11-26-2">PHP 5.6.16 is available</a></div>
+<nav id="trick"><div><dl>
+<dt><a href="http://php.net/manual/en/getting-started.php">Getting Started</a></dt>
+	<dd><a href="http://php.net/manual/en/introduction.php">Introduction</a></dd>
+	<dd><a href="http://php.net/manual/en/tutorial.php">A simple tutorial</a></dd>
+<dt><a href="http://php.net/manual/en/langref.php">Language Reference</a></dt>
+	<dd><a href="http://php.net/manual/en/language.basic-syntax.php">Basic syntax</a></dd>
+	<dd><a href="http://php.net/manual/en/language.types.php">Types</a></dd>
+	<dd><a href="http://php.net/manual/en/language.variables.php">Variables</a></dd>
+	<dd><a href="http://php.net/manual/en/language.constants.php">Constants</a></dd>
+	<dd><a href="http://php.net/manual/en/language.expressions.php">Expressions</a></dd>
+	<dd><a href="http://php.net/manual/en/language.operators.php">Operators</a></dd>
+	<dd><a href="http://php.net/manual/en/language.control-structures.php">Control Structures</a></dd>
+	<dd><a href="http://php.net/manual/en/language.functions.php">Functions</a></dd>
+	<dd><a href="http://php.net/manual/en/language.oop5.php">Classes and Objects</a></dd>
+	<dd><a href="http://php.net/manual/en/language.namespaces.php">Namespaces</a></dd>
+	<dd><a href="http://php.net/manual/en/language.errors.php">Errors</a></dd>
+	<dd><a href="http://php.net/manual/en/language.exceptions.php">Exceptions</a></dd>
+	<dd><a href="http://php.net/manual/en/language.generators.php">Generators</a></dd>
+	<dd><a href="http://php.net/manual/en/language.references.php">References Explained</a></dd>
+	<dd><a href="http://php.net/manual/en/reserved.variables.php">Predefined Variables</a></dd>
+	<dd><a href="http://php.net/manual/en/reserved.exceptions.php">Predefined Exceptions</a></dd>
+	<dd><a href="http://php.net/manual/en/reserved.interfaces.php">Predefined Interfaces and Classes</a></dd>
+	<dd><a href="http://php.net/manual/en/context.php">Context options and parameters</a></dd>
+	<dd><a href="http://php.net/manual/en/wrappers.php">Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href="http://php.net/manual/en/security.php">Security</a></dt>
+	<dd><a href="http://php.net/manual/en/security.intro.php">Introduction</a></dd>
+	<dd><a href="http://php.net/manual/en/security.general.php">General considerations</a></dd>
+	<dd><a href="http://php.net/manual/en/security.cgi-bin.php">Installed as CGI binary</a></dd>
+	<dd><a href="http://php.net/manual/en/security.apache.php">Installed as an Apache module</a></dd>
+	<dd><a href="http://php.net/manual/en/security.filesystem.php">Filesystem Security</a></dd>
+	<dd><a href="http://php.net/manual/en/security.database.php">Database Security</a></dd>
+	<dd><a href="http://php.net/manual/en/security.errors.php">Error Reporting</a></dd>
+	<dd><a href="http://php.net/manual/en/security.globals.php">Using Register Globals</a></dd>
+	<dd><a href="http://php.net/manual/en/security.variables.php">User Submitted Data</a></dd>
+	<dd><a href="http://php.net/manual/en/security.magicquotes.php">Magic Quotes</a></dd>
+	<dd><a href="http://php.net/manual/en/security.hiding.php">Hiding PHP</a></dd>
+	<dd><a href="http://php.net/manual/en/security.current.php">Keeping Current</a></dd>
+<dt><a href="http://php.net/manual/en/features.php">Features</a></dt>
+	<dd><a href="http://php.net/manual/en/features.http-auth.php">HTTP authentication with PHP</a></dd>
+	<dd><a href="http://php.net/manual/en/features.cookies.php">Cookies</a></dd>
+	<dd><a href="http://php.net/manual/en/features.sessions.php">Sessions</a></dd>
+	<dd><a href="http://php.net/manual/en/features.xforms.php">Dealing with XForms</a></dd>
+	<dd><a href="http://php.net/manual/en/features.file-upload.php">Handling file uploads</a></dd>
+	<dd><a href="http://php.net/manual/en/features.remote-files.php">Using remote files</a></dd>
+	<dd><a href="http://php.net/manual/en/features.connection-handling.php">Connection handling</a></dd>
+	<dd><a href="http://php.net/manual/en/features.persistent-connections.php">Persistent Database Connections</a></dd>
+	<dd><a href="http://php.net/manual/en/features.safe-mode.php">Safe Mode</a></dd>
+	<dd><a href="http://php.net/manual/en/features.commandline.php">Command line usage</a></dd>
+	<dd><a href="http://php.net/manual/en/features.gc.php">Garbage Collection</a></dd>
+	<dd><a href="http://php.net/manual/en/features.dtrace.php">DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href="http://php.net/manual/en/funcref.php">Function Reference</a></dt>
+	<dd><a href="http://php.net/manual/en/refs.basic.php.php">Affecting PHP's Behaviour</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.audio.php">Audio Formats Manipulation</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.remote.auth.php">Authentication Services</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.cmdline.php">Command Line Specific Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.compression.php">Compression and Archive Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.creditcard.php">Credit Card Processing</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.crypto.php">Cryptography Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.database.php">Database Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.calendar.php">Date and Time Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.fileprocess.file.php">File System Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.international.php">Human Language and Character Encoding Support</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.image.php">Image Processing and Generation</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.remote.mail.php">Mail Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.math.php">Mathematical Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.nontext.php">Non-Text MIME Output</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.fileprocess.process.php">Process Control Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.other.php">Other Basic Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.remote.other.php">Other Services</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.search.php">Search Engine Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.server.php">Server Specific Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.session.php">Session Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.text.php">Text Processing</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.basic.vartype.php">Variable and Type Related Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.webservice.php">Web Services</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.utilspec.windows.php">Windows Only Extensions</a></dd>
+	<dd><a href="http://php.net/manual/en/refs.xml.php">XML Manipulation</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+  <div id="breadcrumbs" class="clearfix">
+    <div id="breadcrumbs-inner">
+          <div class="next">
+        <a href="http://php.net/manual/en/function.openssl-free-key.php">
+          openssl_free_key »
+        </a>
+      </div>
+              <div class="prev">
+        <a href="http://php.net/manual/en/function.openssl-encrypt.php">
+          « openssl_encrypt        </a>
+      </div>
+          <ul>
+            <li><a href="http://php.net/manual/en/index.php">PHP Manual</a></li>      <li><a href="http://php.net/manual/en/funcref.php">Function Reference</a></li>      <li><a href="http://php.net/manual/en/refs.crypto.php">Cryptography Extensions</a></li>      <li><a href="http://php.net/manual/en/book.openssl.php">OpenSSL</a></li>      <li><a href="http://php.net/manual/en/ref.openssl.php">OpenSSL Functions</a></li>      </ul>
+    </div>
+  </div>
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+  <div class="page-tools">
+    <div class="change-language">
+      <form action="/manual/change.php" method="get" id="changelang" name="changelang">
+        <fieldset>
+          <label for="changelang-langs">Change language:</label>
+          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
+            <option value="en/function.openssl-error-string.php" selected="selected">English</option>
+            <option value="pt_BR/function.openssl-error-string.php">Brazilian Portuguese</option>
+            <option value="zh/function.openssl-error-string.php">Chinese (Simplified)</option>
+            <option value="fr/function.openssl-error-string.php">French</option>
+            <option value="de/function.openssl-error-string.php">German</option>
+            <option value="ja/function.openssl-error-string.php">Japanese</option>
+            <option value="kr/function.openssl-error-string.php">Korean</option>
+            <option value="ro/function.openssl-error-string.php">Romanian</option>
+            <option value="ru/function.openssl-error-string.php">Russian</option>
+            <option value="es/function.openssl-error-string.php">Spanish</option>
+            <option value="tr/function.openssl-error-string.php">Turkish</option>
+            <option value="help-translate.php">Other</option>
+          </select>
+        </fieldset>
+      </form>
+    </div>
+    <div class="edit-bug">
+      <a href="https://edit.php.net/?project=PHP&amp;perm=en/function.openssl-error-string.php">Edit</a>
+      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=function.openssl-error-string">Report a Bug</a>
+    </div>
+  </div><div id="function.openssl-error-string" class="refentry">
+ <div class="refnamediv">
+  <h1 class="refname">openssl_error_string</h1>
+  <p class="verinfo">(PHP 4 &gt;= 4.0.6, PHP 5)</p><p class="refpurpose"><span class="refname">openssl_error_string</span> — <span class="dc-title">Return openSSL error message</span></p>
+
+ </div>
+ 
+ <div class="refsect1 description" id="refsect1-function.openssl-error-string-description">
+  <h3 class="title">Description<a class="genanchor" href="#refsect1-function.openssl-error-string-description"> ¶</a></h3>
+  <div class="methodsynopsis dc-description">
+   <span class="type">string</span> <span class="methodname"><strong>openssl_error_string</strong></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+
+  <p class="para rdfs-comment">
+   <span class="function"><strong>openssl_error_string()</strong></span> returns the last error from the
+   openSSL library.  Error messages are queued, so this function should be
+   called multiple times to collect all of the information. The last error will
+   be the most recent one.
+  </p>
+ </div>
+
+
+ <div class="refsect1 returnvalues" id="refsect1-function.openssl-error-string-returnvalues">
+  <h3 class="title">Return Values<a class="genanchor" href="#refsect1-function.openssl-error-string-returnvalues"> ¶</a></h3>
+  <p class="para">
+   Returns an error message string, or <strong><code>FALSE</code></strong> if there are no more error
+   messages to return.
+  </p>
+ </div>
+
+
+ <div class="refsect1 examples" id="refsect1-function.openssl-error-string-examples">
+  <h3 class="title">Examples<a class="genanchor" href="#refsect1-function.openssl-error-string-examples"> ¶</a></h3>
+  <div class="example" id="example-940">
+    <p><strong>Example #1 <span class="function"><strong>openssl_error_string()</strong></span> example</strong></p>
+    <div class="example-contents">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br></span><span style="color: #FF8000">//&nbsp;lets&nbsp;assume&nbsp;you&nbsp;just&nbsp;called&nbsp;an&nbsp;openssl&nbsp;function&nbsp;that&nbsp;failed<br></span><span style="color: #007700">while&nbsp;(</span><span style="color: #0000BB">$msg&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">openssl_error_string</span><span style="color: #007700">())<br>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #0000BB">$msg&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"&lt;br&nbsp;/&gt;\n"</span><span style="color: #007700">;<br></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+   </div>
+  
+ </div>
+
+
+</div>
+<section id="usernotes">
+ <div class="head">
+  <span class="action"><a href="http://php.net/manual/add-note.php?sect=function.openssl-error-string&amp;redirect=http://php.net/manual/en/function.openssl-error-string.php"><img src="PHP%20%20openssl_error_string%20-%20Manual_files/notes-add2x.png" alt="add a note" height="12" width="12"> <small>add a note</small></a></span>
+  <h3 class="title">User Contributed Notes <span class="count">1 note</span></h3>
+ </div><div id="allnotes">
+  <div class="note" id="112711">  <div class="votes">
+    <div id="Vu112711">
+    <a href="http://php.net/manual/vote-note.php?id=112711&amp;page=function.openssl-error-string&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd112711">
+    <a href="http://php.net/manual/vote-note.php?id=112711&amp;page=function.openssl-error-string&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div class="tally" id="V112711" title="42% like this...">
+    -1
+    </div>
+  </div>
+  <a href="#112711" class="name">
+  <strong class="user"><em>Richard Lynch</em></strong></a><a class="genanchor" href="#112711"> ¶</a><div class="date" title="2013-07-15 07:34"><strong>2 years ago</strong></div>
+  <div style="opacity: 0.75;" class="text" id="Hcom112711">
+<div class="phpcode"><code><span class="html">
+Note that there may be two (or more) lines for one error.<br><br>Best to clear it out and read it for each openssl call.<br><br>PS<br>There
+ are no "threads" and if the other library doesn't have enough sense to 
+read (and therefore clear) the queue (errr, dequeue) of messages before 
+and after their openssl calls...<br>A) That's their problem<br>B) Look for a new library, because NOT doing that means they aren't writing their code properly.</span>
+</code></div>
+  </div>
+ </div></div>
+
+ <div class="foot"><a href="http://php.net/manual/add-note.php?sect=function.openssl-error-string&amp;redirect=http://php.net/manual/en/function.openssl-error-string.php"><img src="PHP%20%20openssl_error_string%20-%20Manual_files/notes-add2x.png" alt="add a note" height="12" width="12"> <small>add a note</small></a></div>
+</section>    </section><!-- layout-content -->
+        <aside class="layout-menu">
+    
+        <ul class="parent-menu-list">
+                                    <li>
+                <a href="http://php.net/manual/en/ref.openssl.php">OpenSSL Functions</a>
+    
+                                    <ul class="child-menu-list">
+    
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-cipher-iv-length.php" title="openssl_​cipher_​iv_​length">openssl_​cipher_​iv_​length</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-csr-export-to-file.php" title="openssl_​csr_​export_​to_​file">openssl_​csr_​export_​to_​file</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-csr-export.php" title="openssl_​csr_​export">openssl_​csr_​export</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-csr-get-public-key.php" title="openssl_​csr_​get_​public_​key">openssl_​csr_​get_​public_​key</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-csr-get-subject.php" title="openssl_​csr_​get_​subject">openssl_​csr_​get_​subject</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-csr-new.php" title="openssl_​csr_​new">openssl_​csr_​new</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-csr-sign.php" title="openssl_​csr_​sign">openssl_​csr_​sign</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-decrypt.php" title="openssl_​decrypt">openssl_​decrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-dh-compute-key.php" title="openssl_​dh_​compute_​key">openssl_​dh_​compute_​key</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-digest.php" title="openssl_​digest">openssl_​digest</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-encrypt.php" title="openssl_​encrypt">openssl_​encrypt</a>
+                        </li>
+                          
+                        <li class="current">
+                            <a href="http://php.net/manual/en/function.openssl-error-string.php" title="openssl_​error_​string">openssl_​error_​string</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-free-key.php" title="openssl_​free_​key">openssl_​free_​key</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-get-cert-locations.php" title="openssl_​get_​cert_​locations">openssl_​get_​cert_​locations</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-get-cipher-methods.php" title="openssl_​get_​cipher_​methods">openssl_​get_​cipher_​methods</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-get-md-methods.php" title="openssl_​get_​md_​methods">openssl_​get_​md_​methods</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-get-privatekey.php" title="openssl_​get_​privatekey">openssl_​get_​privatekey</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-get-publickey.php" title="openssl_​get_​publickey">openssl_​get_​publickey</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-open.php" title="openssl_​open">openssl_​open</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pbkdf2.php" title="openssl_​pbkdf2">openssl_​pbkdf2</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs12-export-to-file.php" title="openssl_​pkcs12_​export_​to_​file">openssl_​pkcs12_​export_​to_​file</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs12-export.php" title="openssl_​pkcs12_​export">openssl_​pkcs12_​export</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs12-read.php" title="openssl_​pkcs12_​read">openssl_​pkcs12_​read</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs7-decrypt.php" title="openssl_​pkcs7_​decrypt">openssl_​pkcs7_​decrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs7-encrypt.php" title="openssl_​pkcs7_​encrypt">openssl_​pkcs7_​encrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs7-sign.php" title="openssl_​pkcs7_​sign">openssl_​pkcs7_​sign</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkcs7-verify.php" title="openssl_​pkcs7_​verify">openssl_​pkcs7_​verify</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-export-to-file.php" title="openssl_​pkey_​export_​to_​file">openssl_​pkey_​export_​to_​file</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-export.php" title="openssl_​pkey_​export">openssl_​pkey_​export</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-free.php" title="openssl_​pkey_​free">openssl_​pkey_​free</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-get-details.php" title="openssl_​pkey_​get_​details">openssl_​pkey_​get_​details</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-get-private.php" title="openssl_​pkey_​get_​private">openssl_​pkey_​get_​private</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-get-public.php" title="openssl_​pkey_​get_​public">openssl_​pkey_​get_​public</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-pkey-new.php" title="openssl_​pkey_​new">openssl_​pkey_​new</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-private-decrypt.php" title="openssl_​private_​decrypt">openssl_​private_​decrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-private-encrypt.php" title="openssl_​private_​encrypt">openssl_​private_​encrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-public-decrypt.php" title="openssl_​public_​decrypt">openssl_​public_​decrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-public-encrypt.php" title="openssl_​public_​encrypt">openssl_​public_​encrypt</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-random-pseudo-bytes.php" title="openssl_​random_​pseudo_​bytes">openssl_​random_​pseudo_​bytes</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-seal.php" title="openssl_​seal">openssl_​seal</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-sign.php" title="openssl_​sign">openssl_​sign</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-spki-export-challenge.php" title="openssl_​spki_​export_​challenge">openssl_​spki_​export_​challenge</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-spki-export.php" title="openssl_​spki_​export">openssl_​spki_​export</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-spki-new.php" title="openssl_​spki_​new">openssl_​spki_​new</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-spki-verify.php" title="openssl_​spki_​verify">openssl_​spki_​verify</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-verify.php" title="openssl_​verify">openssl_​verify</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-check-private-key.php" title="openssl_​x509_​check_​private_​key">openssl_​x509_​check_​private_​key</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-checkpurpose.php" title="openssl_​x509_​checkpurpose">openssl_​x509_​checkpurpose</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-export-to-file.php" title="openssl_​x509_​export_​to_​file">openssl_​x509_​export_​to_​file</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-export.php" title="openssl_​x509_​export">openssl_​x509_​export</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-fingerprint.php" title="openssl_​x509_​fingerprint">openssl_​x509_​fingerprint</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-free.php" title="openssl_​x509_​free">openssl_​x509_​free</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-parse.php" title="openssl_​x509_​parse">openssl_​x509_​parse</a>
+                        </li>
+                          
+                        <li class="">
+                            <a href="http://php.net/manual/en/function.openssl-x509-read.php" title="openssl_​x509_​read">openssl_​x509_​read</a>
+                        </li>
+                            
+                    </ul>
+                    
+            </li>
+                        
+                    </ul>
+    </aside>
+
+
+  </div><!-- layout -->
+         
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="http://php.net/copyright.php">Copyright © 2001-2015 The PHP Group</a></li>
+        <li><a href="http://php.net/my.php">My PHP.net</a></li>
+        <li><a href="http://php.net/contact.php">Contact</a></li>
+        <li><a href="http://php.net/sites.php">Other PHP.net sites</a></li>
+        <li><a href="http://php.net/mirrors.php">Mirror sites</a></li>
+        <li><a href="http://php.net/privacy.php">Privacy policy</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/jquery.js"></script>
+<script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/cached_005.php"></script>
+<script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/cached_006.php"></script>
+<script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/cached.php"></script>
+<script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/cached_004.php"></script>
+<script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/cached_003.php"></script>
+<script type="text/javascript" src="PHP%20%20openssl_error_string%20-%20Manual_files/cached_002.php"></script>
+
+<a style="display: none;" id="toTop" href="javascript:;"><span id="toTopHover"></span><img alt="To Top" src="PHP%20%20openssl_error_string%20-%20Manual_files/to-top2x.png" height="40" width="40"></a>
+
+
+
+
+</body></html>
